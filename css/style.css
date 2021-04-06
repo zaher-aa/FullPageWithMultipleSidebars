@@ -1,0 +1,645 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f1ec;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 20px;
+  padding: 30px;
+}
+
+aside.left img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+aside.left > * {
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+aside.left img {
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+aside.left img:hover {
+  box-shadow: 0 0 0 1.5px #2f9bc1;
+}
+
+aside.left form {
+  display: flex;
+  justify-content: space-between;
+}
+
+aside.left .search {
+  padding: 1.3rem;
+}
+
+aside.left .search input[type="text"] {
+  width: 60%;
+  background-color: #f7f7f7;
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  box-shadow: 0 0 0 0.5px silver;
+}
+
+aside.left .search input[type="submit"] {
+  width: 36%;
+  padding: 7px 10px;
+  background-color: #2f9bc1;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  cursor: pointer;
+}
+
+aside.left .search input[type="submit"]:hover {
+  background-color: #0a81ac;
+}
+
+.left-side-parent .category {
+  padding: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.left-side-parent .options {
+  padding: 1.2rem;
+  padding-bottom: 0.4rem;
+}
+
+.left-side-parent .options span {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #77af12;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 1px;
+  margin-bottom: 5px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.left-side-parent .options span:hover {
+  background-color: #588602;
+}
+
+.left-side-parent .left-side-pairs {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+}
+
+.left-side-parent .left-side-pairs img {
+  cursor: pointer;
+}
+
+.left-side-parent .left-side-pairs .info {
+  margin-left: 15px;
+  font-size: 0.85rem;
+  letter-spacing: -0.5px;
+}
+
+.left-side-parent .left-side-pairs .info .name {
+  font-weight: bold;
+  margin-bottom: 4px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.left-side-parent .left-side-pairs .info .name:hover {
+  text-decoration: underline;
+}
+
+.left-side-parent .left-side-pairs .info .desc {
+  display: inline-block;
+  background-color: #e4ebf1;
+  color: #84a3be;
+  padding: 2px 9px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  width: fit-content;
+  margin-left: 3px;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.left-side-parent .left-side-pairs:last-child {
+  padding-bottom: 2.5rem;
+}
+
+.active-members .imgs-container {
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 15px 0px;
+}
+
+.active-members .imgs-container img {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.calender .month-year {
+  padding: 1.3rem;
+  display: inline-block;
+  color: #777;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 55%;
+  padding-bottom: 0.7rem;
+}
+
+.calender .container {
+  padding: 0.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  gap: 20px 10px;
+}
+
+.calender .container span.day-letter {
+  font-weight: bold;
+}
+
+.calender .container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #777;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.calender .container span.day-letter:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.calender .container span.day-num:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+.calender .next {
+  padding: 0.5rem 1rem 1rem 1rem;
+  color: #777;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.calender .next i {
+  font-size: 0.7rem;
+}
+
+aside.right .right-side-parent {
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+aside.right .right-side-parent p.category {
+  padding: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+aside.right .right-side-parent form {
+  padding: 1.2rem;
+  padding-bottom: 0;
+}
+
+aside.right .right-side-parent form * {
+  margin-bottom: 10px;
+}
+
+aside.right .right-side-parent form input[type="text"],
+aside.right .right-side-parent form input[type="password"] {
+  background-color: #f7f7f7;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  box-shadow: 0 0 0 0.5px silver;
+  margin-bottom: 20px;
+}
+
+aside.right .right-side-parent form .checkbox-container label {
+  margin-left: 5px;
+  color: #777;
+}
+
+aside.right .right-side-parent form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #2f9bc1;
+  font-weight: bold;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+aside.right .right-side-parent form input[type="submit"]:hover {
+  background-color: #0a81ac;
+}
+
+aside.right .right-side-parent .pass-forgot-container {
+  margin-left: 42%;
+  padding: 1rem;
+  color: #333;
+}
+
+aside.right .right-side-parent .pass-forgot-container i {
+  font-size: 0.8rem;
+}
+
+aside.right .right-side-parent .pass-forgot-container a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+aside.right .right-side-parent .pass-forgot-container a:hover {
+  text-decoration: underline;
+  color: #03038d;
+}
+
+aside.right .right-side-parent .stats-container {
+  padding: 1.2rem;
+}
+
+aside.right .right-side-parent .stats-container > * {
+  background-color: #c12f6d;
+  color: white;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+aside.right .right-side-parent .stats-container > * i {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+aside.right .right-side-parent .stats-container > * .ds {
+  font-size: 0.9rem;
+}
+
+aside.right .right-side-parent .stats-container > * span.number {
+  font-size: 1.1rem;
+}
+
+aside.right .online span {
+  display: block;
+  padding: 1.2rem;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+aside.right .resent .container {
+  padding: 1.2rem;
+}
+
+aside.right .resent .container .reply-container {
+  margin-bottom: 20px;
+}
+
+aside.right .resent .container .reply-container .reply {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+aside.right .resent .container .reply-container .when {
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+aside.right .resent .container .reply-container:last-child {
+  margin-bottom: 0;
+}
+
+main header {
+  position: relative;
+}
+
+main header img {
+  width: 100%;
+  height: 340px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+main header span {
+  position: absolute;
+  background-color: #333;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  left: 20px;
+  bottom: 35px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+main .main-parent:first-of-type {
+  margin-bottom: 20px;
+}
+
+main .main-parent:not(:first-of-type) {
+  background-color: white;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+main .main-parent:not(:first-of-type) p.category {
+  padding: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  background-color: #f7f7f7;
+  border-radius: 7px 7px 0 0;
+  -webkit-border-radius: 7px 7px 0 0;
+  -moz-border-radius: 7px 7px 0 0;
+  -ms-border-radius: 7px 7px 0 0;
+  -o-border-radius: 7px 7px 0 0;
+}
+
+main .main-parent:not(:first-of-type) .activities-container {
+  padding: 1.2rem;
+}
+
+main .main-parent:not(:first-of-type) .activities-container .user {
+  display: flex;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+main .main-parent:not(:first-of-type) .activities-container .user .info {
+  line-height: 1.6;
+  margin-left: 1rem;
+}
+
+main .main-parent:not(:first-of-type) .activities-container .user .info .up {
+  margin-bottom: 0.5rem;
+}
+
+main .main-parent:not(:first-of-type) .activities-container .user .info .up .desc {
+  font-size: 0.9rem;
+  word-spacing: 2px;
+}
+
+main .main-parent:not(:first-of-type) .activities-container .user .info .up .when {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+main .main-parent:not(:first-of-type) .activities-container .user .info .down {
+  font-size: 0.9rem;
+  color: rgba(119, 119, 119, 0.925);
+  padding-bottom: 0.5rem;
+}
+
+main .main-parent:not(:first-of-type) .activities-container .user .info .down .read-more {
+  color: black;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+main .main-parent:not(:first-of-type) .activities-container .user .info .down .read-more:hover {
+  text-decoration: underline;
+}
+
+main .main-parent:not(:first-of-type) img {
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  cursor: pointer;
+}
+
+main .main-parent:not(:first-of-type) img:hover {
+  box-shadow: 0 0 0 1.5px #2f9bc1;
+}
+
+main .main-parent:not(:first-of-type) strong:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+main .main-parent:not(:first-of-type) button {
+  width: 94%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 0.5px silver;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin: 1.2rem;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+main .main-parent:not(:first-of-type) button:hover {
+  background-color: #ddd;
+}
+
+main .main-parent:not(:first-of-type) .post {
+  display: flex;
+  padding: 1.2rem;
+  padding-bottom: 0.3rem;
+  line-height: 1.6;
+}
+
+main .main-parent:not(:first-of-type) .post img {
+  margin-top: 10px;
+  width: 90px;
+  height: 70px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+main .main-parent:not(:first-of-type) .post .info {
+  margin-left: 1rem;
+}
+
+main .main-parent:not(:first-of-type) .post .info p.title {
+  font-weight: bold;
+  width: fit-content;
+  cursor: pointer;
+}
+
+main .main-parent:not(:first-of-type) .post .info p.title:hover {
+  text-decoration: underline;
+}
+
+main .main-parent:not(:first-of-type) .post .info p.desc {
+  font-size: 0.85rem;
+  color: #777;
+  padding-top: 5px;
+}
+
+main .main-parent:not(:first-of-type) .post .info p.desc i {
+  font-size: 0.65rem;
+  cursor: pointer;
+}
+
+main .main-parent:not(:first-of-type) .post .info p.desc i:hover {
+  color: blue;
+}
+
+main .main-parent:not(:first-of-type) div.buttons {
+  display: flex;
+  padding: 1.2rem;
+  margin-left: 82%;
+  width: fit-content;
+  padding-top: 1rem;
+}
+
+main .main-parent:not(:first-of-type) div.buttons div {
+  background-color: #f0f1ed;
+  padding: 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-left: 6px;
+  color: #777;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+main .main-parent:not(:first-of-type) div.buttons div:hover {
+  background-color: #ddd;
+}
+
+main .main-parent:not(:first-of-type) div.buttons div:first-child {
+  background-color: #ddd;
+  cursor: no-drop;
+}
+
+main .main-parent:not(:first-of-type) .features-container {
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(122px, 1fr));
+  gap: 10px;
+}
+
+main .main-parent:not(:first-of-type) .features-container img {
+  max-width: 100%;
+  height: 110px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+main .main-parent:not(:first-of-type) .features-container p.text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+main .main-parent:nth-of-type(2) img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+/*# sourceMappingURL=style.css.map */
